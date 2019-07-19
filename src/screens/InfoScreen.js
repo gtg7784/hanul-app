@@ -61,6 +61,7 @@ class LoginScreen extends React.Component {
                   backgroundColor: '#fff'
                 }}
                 placeholder='example@example.com'
+                value="gtg7784@naver.com"
               />
             </View>
             <View style={{
@@ -71,7 +72,7 @@ class LoginScreen extends React.Component {
                 fontSize: 16,
                 fontWeight: '600',
                 color: COLOR_WHITE,
-                marginBottom: 10
+                marginBottom: 10,
               }}>비밀번호</Text>
               <TextInput
                 secureTextEntry={true}
@@ -84,17 +85,7 @@ class LoginScreen extends React.Component {
                   marginBottom: 20
                 }}
                 placeholder="password"
-              />
-              <TextInput
-                secureTextEntry={true}
-                style={{
-                  paddingLeft: 14,
-                  width: width - 76,
-                  height: 40,
-                  borderRadius: 12,
-                  backgroundColor: '#fff'
-                }}
-                placeholder="password"
+                value="asdfqwer"
               />
             </View>
             <View style={{
@@ -115,7 +106,7 @@ class LoginScreen extends React.Component {
                   borderRadius: 12,
                   backgroundColor: '#fff'
                 }}
-                placeholder='이름'
+                value="고태건"
               />
             </View>
             <View style={{
@@ -137,6 +128,7 @@ class LoginScreen extends React.Component {
                   backgroundColor: '#fff'
                 }}
                 placeholder='YYYY/MM/DD'
+              value="2019/08/04"
               />
             </View>
             <TouchableOpacity
@@ -149,14 +141,14 @@ class LoginScreen extends React.Component {
                 alignContent: 'center'
               }}
               
-              onPress={() => this.props.navigation.navigate('Login')}
+              onPress={() => this.props.navigation.navigate('Profile')}
             >
               <Text style={{
                 textAlign: 'center',
                 fontSize: 16,
                 fontWeight: '600',
                 color: COLOR_PURPLE
-              }}>Register</Text>
+              }}>확인</Text>
             </TouchableOpacity>
           </ScrollView>
         </SafeAreaView>

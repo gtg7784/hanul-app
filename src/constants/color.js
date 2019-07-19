@@ -1,3 +1,9 @@
 export const COLOR_WHITE = '#ffffff';
 export const COLOR_PURPLE = "#af8fff";
 export const COLOR_GREEN = '#82e8b0';
+export const COLOR_PINK = '#fe7891';
+export const COLOR_BLACK = '#000000';
+export const COLOR_BLUE = '#0091ff';
+export const COLOR_SHADOW = 'rgb(34, 34, 34)';
+export const COLOR_SHELL = '#fbfbfb';
+export const COLOR_TEXT_GRAY = '#949494';

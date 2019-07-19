@@ -49,7 +49,16 @@ class LoginScreen extends React.Component {
   }
     
   static navigationOptions = ({
-    header: null
+    header: null,
+    headerStyle: {
+      elevation: 0,
+      shadowOffset: { height: 0, width: 0 },
+      shadowOpacity: 0,
+      shadowRadius: 0,
+      backgroundColor: 'transparent',
+      shadowColor: "transparent"
+    }
+
   });
 
   render() {

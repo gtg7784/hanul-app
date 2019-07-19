@@ -29,7 +29,11 @@ import { createMaterialTopTabNavigator } from "react-navigation";
 
 import LoginScreen from './src/screens/LoginScreen'
 import HomeScreen from './src/screens/HomeScreen'
+import RegisterScreen from './src/screens/RegisterScreen'
+import ProfileScreen from './src/screens/ProfileScreen'
+import InfoScreen from './src/screens/InfoScreen'
 import stores from './src/stores'
+import ProfileLastScreen from './src/screens/ProfileLastScreen';
 
 class App extends Component{
   componentDidMount = async () => {
@@ -88,6 +92,28 @@ class App extends Component{
 const LoginStack = createStackNavigator(
   {
     Login: { screen: LoginScreen },
+    Register : { screen: RegisterScreen }
+  },
+  {
+    defaultNavigationOptions: ({
+      headerStyle: {
+        elevation: 0,
+        shadowOffset: { height: 0, width: 0 },
+        shadowOpacity: 0,
+        shadowRadius: 0,
+        backgroundColor: '#fff',
+        shadowColor: "transparent"
+      }
+    })
+  }
+)
+
+const HomeStack = createStackNavigator(
+  {
+    Home: { screen: HomeScreen },
+    Profile: { screen: ProfileScreen },
+    ProfileLast: { screen: ProfileLastScreen },
+    Info : {screen: InfoScreen}
   },
   {
     defaultNavigationOptions: ({
@@ -105,9 +131,20 @@ const LoginStack = createStackNavigator(
 
 const MainStack = createStackNavigator(
   {
-    Home: {
-      screen: HomeScreen,
-    }
+    Home: { screen: HomeStack },
+  },
+  {
+    defaultNavigationOptions: ({
+      headerStyle: {
+        elevation: 0,
+        shadowOffset: { height: 0, width: 0 },
+        shadowOpacity: 0,
+        shadowRadius: 0,
+        height: 0,
+        backgroundColor: 'transparent',
+        shadowColor: "transparent"
+      }
+    })
   }
 )
 
