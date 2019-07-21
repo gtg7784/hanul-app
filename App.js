@@ -36,6 +36,7 @@ import stores from './src/stores'
 import ProfileLastScreen from './src/screens/ProfileLastScreen';
 
 class App extends Component{
+  
   componentDidMount = async () => {
     if (Platform.OS === "android") {
       const readStoragePerm = await PermissionsAndroid.check(
